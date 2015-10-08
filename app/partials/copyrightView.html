@@ -1,0 +1,24 @@
+<footer class="container-fluid copyright-view">
+
+    <p class="text-center">
+        <a href="http://www.four51.com" target="_blank">
+            <i class="fa fa-cloud"></i><br />
+            <strong>{{'Powered by' | xlat}} Four51°</strong>
+        </a>
+    </p>
+    <p class="text-center">
+        {{'Copyright' | xlat}} &copy; {{year}} Four51 Inc. {{'All Rights Reserved' | xlat}}.<br />
+        <span ng-if="!(user.Permissions.contains('HideTerms'))">
+            <a class="btn btn-link btn-sm" href="conditions">
+                {{'Conditions of Use' | xlat}}
+            </a>
+        </span>
+    </p>
+
+</footer>
+
+<!--<footer>
+	<div class="container">
+		<p>{{'Copyright' | xlat}} &copy; {{year}} Powered by <a href="http://www.regencybusinesssolutions.com/">Regency Business Solutions</a></p>
+	</div>
+</footer>-->

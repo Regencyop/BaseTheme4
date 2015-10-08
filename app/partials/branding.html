@@ -1,0 +1,10 @@
+
+
+<section ng-class="{'active': isActive('catalog')}" ng-show="user.Company.LogoUrl">
+    <div class="logo" ng-show="Four51User.isAuthenticated()">
+        <a ng-click="refreshUser()" href="catalog">
+            <img ng-src="{{user.Company.LogoUrl}}" />
+        </a>
+    </div>
+    <!--<homemessage />-->
+</section>
