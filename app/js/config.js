@@ -12,7 +12,13 @@ four51.app.config(['$provide', function($provide) {
 				        trackJs.error("API: " + JSON.stringify(ex));
 			        }
 			        catch (x) {
-				        console.log(JSON.stringify(ex));
+			           
+			         if ((JSON.stringify(ex).indexOf("Inactive Product")) && (document.getElementById("451_btn_orderadd").length !== 0)) {
+			                $( "<div class='errorLogContainterError'><p>This size currently out of stock.</p></div>" ).insertAfter( "#451_btn_orderadd" );
+                        }
+                        $( document ).on( "click", function() {
+                            $(  "div.errorLogContainterError"  ).remove();
+                        });
 			        }
 	            })();
 	        $injector.get('$rootScope').$broadcast('exception', ex, cause);
